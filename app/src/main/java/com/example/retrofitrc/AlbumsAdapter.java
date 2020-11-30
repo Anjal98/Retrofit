@@ -18,6 +18,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.ViewHolder
     public AlbumsAdapter(Context context, ArrayList<model> albumModels){
        this. albumModels = albumModels;
        this.context = context;
+
     }
     @NonNull
     @Override
@@ -28,8 +29,8 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull AlbumsAdapter.ViewHolder viewHolder, int i) {
-        viewHolder.album_user_id.setText(albumModels.get(i).getUserId());
-        viewHolder.album_id.setText(albumModels.get(i).getId());
+        viewHolder.album_user_id.setText(albumModels.get(i).getUserId().toString());
+        viewHolder.album_id.setText(albumModels.get(i).getId().toString());
         viewHolder.title.setText(albumModels.get(i).getTitle());
     }
 
@@ -37,6 +38,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.ViewHolder
     public int getItemCount() {
         return albumModels.size();
     }
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView album_user_id, album_id, title;
@@ -47,5 +49,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.ViewHolder
             album_id = (TextView)itemView.findViewById(R.id.album_id);
             title = (TextView)itemView.findViewById(R.id.title);
         }
+
     }
+
 }

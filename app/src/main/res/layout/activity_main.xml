@@ -8,8 +8,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/albums"
-        android:layout_width="match_parent"
-        android:layout_height="477dp">
+        android:layout_width="367dp"
+        android:layout_height="match_parent">
 
     </androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>
